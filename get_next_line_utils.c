@@ -6,7 +6,7 @@
 /*   By: rapareci <rwdias1991@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:36:28 by rafaeldias        #+#    #+#             */
-/*   Updated: 2021/11/11 11:23:12 by rapareci         ###   ########.fr       */
+/*   Updated: 2021/11/14 10:31:38 by rapareci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,16 +96,20 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	return (count);
 }
 
-char	*ft_strdup(const char *src)
+char	*ft_strdup(char *string)
 {
-	char	*ptr;
-	size_t	len;
+	int		i;
+	char	*str;
 
-	len = ft_strlen(src);
-	ptr = malloc(len + 1);
-	if (!ptr)
-		return (0);
-	ft_strlcpy(ptr, src, len + 1);
-	ptr[len] = '\0';
-	return (ptr);
+	i = 0;
+	str = (char *)malloc (sizeof(char) * (ft_strlen(string) + 1));
+	if (str == NULL)
+		return (NULL);
+	while (string[i])
+	{
+		str[i] = string[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

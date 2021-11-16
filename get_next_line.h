@@ -10,13 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# include <stdio.h> 
-# include <stddef.h> 
+
+# include <stdlib.h>
 # include <unistd.h>
-# include <string.h>
-# include <stdlib.h> 
+# include <stddef.h>
+#include <sys/types.h> 
+#include <sys/stat.h> 
+#include <fcntl.h>
+#include <stdio.h> 
+
+char	*get_next_line(int fd);
+size_t	ft_strlen(const char *str);
+char	*ft_strjoin(char const *s1, char const *s2);
+size_t	ft_strlcpy(char *dst, const char *src, size_t n);
+char	*ft_strdup(char *string);
+char	*ft_strchr(const char *s, int c);
 
 #endif
