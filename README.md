@@ -1,4 +1,4 @@
-# libft (42 Cursus) 
+# get next line (42 Cursus) 
 
 Description
 
