@@ -10,7 +10,7 @@ Calling the function get_next_line in a loop will then allow you to read the tex
 Usage
 - Edit main in get_next_line.c to the file you want to read.
 - Compile with: clang get_next_line.c get_next_line_utils.c -D BUFFER_SIZE=50  && ./a.out 
-
+- Feel free to compile with the flags -Wall, -Wextra and -Werror.
 -------------------------------------------
 
 EVALUATED BY MOULINETTE - 14th November 2021%
